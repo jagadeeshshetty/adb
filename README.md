@@ -1,7 +1,9 @@
 
-# Android Debug Bridge (adb) Shell Commands
+# Android Debug Bridge (adb) Shell Commands 
 
 ## adb devices
+
+@octocat :+1: This PR looks great - it's ready to merge! :shipit:
 
 Prints a list of all attached emulator/device
 
