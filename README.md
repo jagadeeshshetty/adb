@@ -1,5 +1,17 @@
 
-# Android Debugger Bridge (ADB) Shell Commands
+# Android Debug Bridge (adb) Shell Commands
+
+## adb devices
+
+Prints a list of all attached emulator/device
+
+In response, return serial number and state 
+
+````bash
+$ adb devices
+List of devices attached
+3a21d0e device
+```
 
 ## Available commands
 
@@ -140,3 +152,11 @@ environment variables:
  $ANDROID_SERIAL          serial number to connect to (see -s)
  $ANDROID_LOG_TAGS        tags to be used by logcat (see logcat --help)
 ```
+
+## Reference
+
+[Official](https://developer.android.com/studio/command-line/adb)
+
+[Github emoji](https://help.github.com/en/articles/basic-writing-and-formatting-syntax#using-emoji)
+
+[adbshell](http://adbshell.com/commands/adb-devices)

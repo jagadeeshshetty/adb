@@ -385,9 +385,19 @@ blockquote {
 
 </head>
 <body>
-<h1 id="android-debugger-bridge-adb-shell-commands">Android Debugger Bridge (ADB) Shell Commands</h1>
-<h2 id="available-commands">Available commands</h2>
-<pre class="hljs"><code><div>$ adb
+<h1 id="android-debug-bridge-adb-shell-commands">Android Debug Bridge (adb) Shell Commands</h1>
+<h2 id="adb-devices">adb devices</h2>
+<p>Prints a list of all attached emulator/device</p>
+<p>In response, return serial number and state</p>
+<pre class="hljs"><code><div>$ adb devices
+List of devices attached
+3a21d0e device
+```
+
+<span class="hljs-comment">## Available commands</span>
+
+```bash
+$ adb
 Android Debug Bridge version 1.0.39
 Version 27.0.0-4455170
 Installed as /Users/jagadeesh/Library/Android/sdk/platform-tools/adb
@@ -522,6 +532,15 @@ environment variables:
  <span class="hljs-variable">$ADB_VENDOR_KEYS</span>         colon-separated list of keys (files or directories)
  <span class="hljs-variable">$ANDROID_SERIAL</span>          serial number to connect to (see -s)
  <span class="hljs-variable">$ANDROID_LOG_TAGS</span>        tags to be used by logcat (see logcat --<span class="hljs-built_in">help</span>)
+```
+
+<span class="hljs-comment">## Reference</span>
+
+[Official](https://developer.android.com/studio/<span class="hljs-built_in">command</span>-line/adb)
+
+[Github emoji](https://help.github.com/en/articles/basic-writing-and-formatting-syntax<span class="hljs-comment">#using-emoji)</span>
+
+[adbshell](http://adbshell.com/commands/adb-devices)
 </div></code></pre>
 
 </body>
