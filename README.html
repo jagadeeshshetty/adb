@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="android-debugger-bridge-adb-shell-commands">Android Debugger Bridge (ADB) Shell Commands</h1>
+<h2 id="available-commands">Available commands</h2>
+<pre class="hljs"><code><div>$ adb
+Android Debug Bridge version 1.0.39
+Version 27.0.0-4455170
+Installed as /Users/jagadeesh/Library/Android/sdk/platform-tools/adb
+
+global options:
+ -a         listen on all network interfaces, not just localhost
+ -d         use USB device (error <span class="hljs-keyword">if</span> multiple devices connected)
+ -e         use TCP/IP device (error <span class="hljs-keyword">if</span> multiple TCP/IP devices available)
+ -s SERIAL  use device with given serial (overrides <span class="hljs-variable">$ANDROID_SERIAL</span>)
+ -t ID      use device with given transport id
+ -H         name of adb server host [default=localhost]
+ -P         port of adb server [default=5037]
+ -L SOCKET  listen on given socket <span class="hljs-keyword">for</span> adb server [default=tcp:localhost:5037]
+
+general commands:
+ devices [-l]             list connected devices (-l <span class="hljs-keyword">for</span> long output)
+ <span class="hljs-built_in">help</span>                     show this <span class="hljs-built_in">help</span> message
+ version                  show version num
+
+networking:
+ connect HOST[:PORT]      connect to a device via TCP/IP [default port=5555]
+ disconnect [HOST[:PORT]]
+     disconnect from given TCP/IP device [default port=5555], or all
+ forward --list           list all forward socket connections
+ forward [--no-rebind] LOCAL REMOTE
+     forward socket connection using:
+       tcp:&lt;port&gt; (&lt;<span class="hljs-built_in">local</span>&gt; may be <span class="hljs-string">"tcp:0"</span> to pick any open port)
+       localabstract:&lt;unix domain socket name&gt;
+       localreserved:&lt;unix domain socket name&gt;
+       localfilesystem:&lt;unix domain socket name&gt;
+       dev:&lt;character device name&gt;
+       jdwp:&lt;process pid&gt; (remote only)
+ forward --remove LOCAL   remove specific forward socket connection
+ forward --remove-all     remove all forward socket connections
+ ppp TTY [PARAMETER...]   run PPP over USB
+ reverse --list           list all reverse socket connections from device
+ reverse [--no-rebind] REMOTE LOCAL
+     reverse socket connection using:
+       tcp:&lt;port&gt; (&lt;remote&gt; may be <span class="hljs-string">"tcp:0"</span> to pick any open port)
+       localabstract:&lt;unix domain socket name&gt;
+       localreserved:&lt;unix domain socket name&gt;
+       localfilesystem:&lt;unix domain socket name&gt;
+ reverse --remove REMOTE  remove specific reverse socket connection
+ reverse --remove-all     remove all reverse socket connections from device
+
+file transfer:
+ push [--sync] LOCAL... REMOTE
+     copy <span class="hljs-built_in">local</span> files/directories to device
+     --sync: only push files that are newer on the host than the device
+ pull [-a] REMOTE... LOCAL
+     copy files/<span class="hljs-built_in">dirs</span> from device
+     -a: preserve file timestamp and mode
+ sync [system|vendor|oem|data|all]
+     sync a <span class="hljs-built_in">local</span> build from <span class="hljs-variable">$ANDROID_PRODUCT_OUT</span> to the device (default all)
+     -l: list but don<span class="hljs-string">'t copy
+
+shell:
+ shell [-e ESCAPE] [-n] [-Tt] [-x] [COMMAND...]
+     run remote shell command (interactive shell if no command given)
+     -e: choose escape character, or "none"; default '</span>~<span class="hljs-string">'
+     -n: don'</span>t <span class="hljs-built_in">read</span> from stdin
+     -T: <span class="hljs-built_in">disable</span> PTY allocation
+     -t: force PTY allocation
+     -x: <span class="hljs-built_in">disable</span> remote <span class="hljs-built_in">exit</span> codes and stdout/stderr separation
+ emu COMMAND              run emulator console <span class="hljs-built_in">command</span>
+
+app installation:
+ install [-lrtsdg] PACKAGE
+ install-multiple [-lrtsdpg] PACKAGE...
+     push package(s) to the device and install them
+     -l: forward lock application
+     -r: replace existing application
+     -t: allow <span class="hljs-built_in">test</span> packages
+     -s: install application on sdcard
+     -d: allow version code downgrade (debuggable packages only)
+     -p: partial application install (install-multiple only)
+     -g: grant all runtime permissions
+ uninstall [-k] PACKAGE
+     remove this app package from the device
+     <span class="hljs-string">'-k'</span>: keep the data and cache directories
+
+backup/restore:
+   to show usage run <span class="hljs-string">"adb shell bu help"</span>
+
+debugging:
+ bugreport [PATH]
+     write bugreport to given PATH [default=bugreport.zip];
+     <span class="hljs-keyword">if</span> PATH is a directory, the bug report is saved <span class="hljs-keyword">in</span> that directory.
+     devices that don not support zipped bug reports output to stdout.
+ jdwp                     list pids of processes hosting a JDWP transport
+ logcat                   show device <span class="hljs-built_in">log</span> (logcat --<span class="hljs-built_in">help</span> <span class="hljs-keyword">for</span> more)
+
+security:
+ <span class="hljs-built_in">disable</span>-verity           <span class="hljs-built_in">disable</span> dm-verity checking on userdebug builds
+ <span class="hljs-built_in">enable</span>-verity            re-enable dm-verity checking on userdebug builds
+ keygen FILE
+     generate adb public/private key; private key stored <span class="hljs-keyword">in</span> FILE,
+     public key stored <span class="hljs-keyword">in</span> FILE.pub (existing files overwritten)
+
+scripting:
+ <span class="hljs-built_in">wait</span>-for[-TRANSPORT]-STATE
+     <span class="hljs-built_in">wait</span> <span class="hljs-keyword">for</span> device to be <span class="hljs-keyword">in</span> the given state
+     State: device, recovery, sideload, or bootloader
+     Transport: usb, <span class="hljs-built_in">local</span>, or any [default=any]
+ get-state                <span class="hljs-built_in">print</span> offline | bootloader | device
+ get-serialno             <span class="hljs-built_in">print</span> &lt;serial-number&gt;
+ get-devpath              <span class="hljs-built_in">print</span> &lt;device-path&gt;
+ remount
+     remount /system, /vendor, and /oem partitions <span class="hljs-built_in">read</span>-write
+ reboot [bootloader|recovery|sideload|sideload-auto-reboot]
+     reboot the device; defaults to booting system image but
+     supports bootloader and recovery too. sideload reboots
+     into recovery and automatically starts sideload mode,
+     sideload-auto-reboot is the same but reboots after sideloading.
+ sideload OTAPACKAGE      sideload the given full OTA package
+ root                     restart adbd with root permissions
+ unroot                   restart adbd without root permissions
+ usb                      restart adb server listening on USB
+ tcpip PORT               restart adb server listening on TCP on PORT
+
+internal debugging:
+ start-server             ensure that there is a server running
+ <span class="hljs-built_in">kill</span>-server              <span class="hljs-built_in">kill</span> the server <span class="hljs-keyword">if</span> it is running
+ reconnect                kick connection from host side to force reconnect
+ reconnect device         kick connection from device side to force reconnect
+ reconnect offline        reset offline/unauthorized devices to force reconnect
+
+environment variables:
+ <span class="hljs-variable">$ADB_TRACE</span>
+     comma-separated list of debug info to <span class="hljs-built_in">log</span>:
+     all,adb,sockets,packets,rwx,usb,sync,sysdeps,transport,jdwp
+ <span class="hljs-variable">$ADB_VENDOR_KEYS</span>         colon-separated list of keys (files or directories)
+ <span class="hljs-variable">$ANDROID_SERIAL</span>          serial number to connect to (see -s)
+ <span class="hljs-variable">$ANDROID_LOG_TAGS</span>        tags to be used by logcat (see logcat --<span class="hljs-built_in">help</span>)
+</div></code></pre>
+
+</body>
+</html>
