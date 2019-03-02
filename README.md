@@ -1,15 +1,13 @@
 
-# Android Debug Bridge (adb) Shell Commands 
+# Android Debug Bridge (adb) Shell Commands :iphone:
 
 ## adb devices
 
-@octocat :+1: This PR looks great - it's ready to merge! :shipit:
-
 Prints a list of all attached emulator/device
 
-In response, return serial number and state 
+In response, return serial number and state
 
-````bash
+```bash
 $ adb devices
 List of devices attached
 3a21d0e device
